@@ -65,14 +65,14 @@ const addressSchema = mongoose.Schema({
         type: String,
         required: true,
         trim: true,
-        minlength: [2, "First name must be at least 2 characters"],
+        minlength: [1, "First name is required"],
         maxlength: [50, "First name cannot exceed 50 characters"]
     },
     lastName: {
         type: String,
         required: true,
         trim: true,
-        minlength: [2, "Last name must be at least 2 characters"],
+        minlength: [1, "Last name is required"],
         maxlength: [50, "Last name cannot exceed 50 characters"]
     },
     // country: {
@@ -85,13 +85,13 @@ const addressSchema = mongoose.Schema({
         type: String,
         required: true,
         trim: true,
-        minlength: [2, "State must be at least 2 characters"]
+        minlength: [1, "State is required"],
     },
     address: {
         type: String,
         required: true,
         trim: true,
-        minlength: [10, "Address must be at least 10 characters"],
+        minlength: [1, "Address is required"],
         maxlength: [200, "Address cannot exceed 200 characters"]
     },
     // postalCode: {
